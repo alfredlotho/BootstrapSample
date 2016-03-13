@@ -53,6 +53,12 @@
                     </li>
                     <li><a href="contactus.html"><span class="fa fa-envelope-o" aria-hidden="true"> Contact</a></li>
                 </ul>
+                <form class="navbar-search pull-right">
+                    <input type="text" placeholder="Email" />
+                    <input type="text" placeholder="Password" />
+                    <label><input type="checkbox" value=""><span class="navbar-custom-text"> Remember me</span></label>
+                    <input type="submit" class="btn btn-info" value="Sign in" />
+                </form>
             </div>
         </div>
     </nav>
@@ -109,9 +115,19 @@
                 <h3 align=center>This Month's Promotions</h3>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="media-heading">Weekend Grand Buffet  <span class="label label-danger">New</span></h2>
+                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                        <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                    </div>
+                    <div class="media-right media-middle">
+                        <a href="#">
+                        <img class="media-object img-thumbnail"
+                         src="img/buffet.png" alt="Buffet">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -139,6 +155,50 @@
                         <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+                <h3 align=center>Reserve a Table</h3>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="guest-count" class="col-sm-2 control-label">Number of Guests</label>                        
+                        <div id="guest-count" class="col-sm-10">
+                            <label class="radio-inline"><input type="radio" name="guest-count">1</label>
+                            <label class="radio-inline"><input type="radio" name="guest-count">2</label>
+                            <label class="radio-inline"><input type="radio" name="guest-count">3</label>
+                            <label class="radio-inline"><input type="radio" name="guest-count">4</label>
+                            <label class="radio-inline"><input type="radio" name="guest-count">5</label>
+                            <label class="radio-inline"><input type="radio" name="guest-count">6</label>
+                        </div>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="reserve-date" class="col-sm-2 control-label">Date and Time</label>
+                        <div class="input-group col-sm-3">
+                            <input type="text" class="form-control" id="reserve-date" placeholder="Date">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                        <div class="input-group col-sm-3 col-sm-offset-1">
+                            <input type="text" class="form-control" id="reserve-time" placeholder="Time">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-4"> <input type="submit" class="btn btn-primary" value="Reserve" /></div>
+                    </div>
+                    <div class="alert alert-warning">
+                        <strong>Warning:</strong> Please <a href="tel:+852 1234 5678"><strong>call</strong></a> us to reserve for more than six guests.
+                    </div>
+                </form>
             </div>
         </div>
     </div>
