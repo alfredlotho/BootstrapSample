@@ -53,15 +53,33 @@
                     </li>
                     <li><a href="contactus.html"><span class="fa fa-envelope-o" aria-hidden="true"> Contact</a></li>
                 </ul>
-                <form class="navbar-search pull-right">
-                    <input type="text" placeholder="Email" />
-                    <input type="text" placeholder="Password" />
-                    <label><input type="checkbox" value=""><span class="navbar-custom-text"> Remember me</span></label>
-                    <input type="submit" class="btn btn-info" value="Sign in" />
-                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-toggle="modal" data-target="#loginModal">
+                        <span class="glyphicon glyphicon-log-in"></span> Login
+                    </a></li>
+                </ul>
             </div>
         </div>
     </nav>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Login </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline">
+                    <input id="email" type="email" class="form-control input-sm" placeholder="Email">
+                    <input id="password" type="password" class="form-control input-sm" placeholder="Password">
+                    <label><input type="checkbox"> Remember me</label>
+                    <button type="submit" class="btn btn-info btn-sm">Sign in</button>
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
     <header class="jumbotron">
 
         <!-- Main component for a primary marketing message or call to action -->
