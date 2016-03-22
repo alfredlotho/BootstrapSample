@@ -81,9 +81,7 @@
         </div>
     </div>
     <header class="jumbotron">
-
         <!-- Main component for a primary marketing message or call to action -->
-
         <div class="container">
             <div class="row row-header">
                 <div class="col-xs-12 col-sm-8">
@@ -97,14 +95,77 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px;"></p>
-                    <a type="button" class="btn btn-warning btn-block" data-toggle="tooltip" title="Or Call us at +852 12345678" data-placement="bottom" href="#reserveform">
+                    <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveform">
                         Reserve Table
                     </a>
                 </div>
-                
             </div>
         </div>
     </header>
+    
+    
+            <div id="reserveform" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Reserve a table </h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group form-inline">
+                                <label for="guest-count" class="col-sm-2 control-label">Number of Guests</label>                        
+                                <div id="guest-count" class="col-sm-10">
+                                    <label class="radio-inline"><input type="radio" name="guest-count">1</label>
+                                    <label class="radio-inline"><input type="radio" name="guest-count">2</label>
+                                    <label class="radio-inline"><input type="radio" name="guest-count">3</label>
+                                    <label class="radio-inline"><input type="radio" name="guest-count">4</label>
+                                    <label class="radio-inline"><input type="radio" name="guest-count">5</label>
+                                    <label class="radio-inline"><input type="radio" name="guest-count">6</label>
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label for="guest-count" class="col-sm-2 control-label">Section</label>
+                                <div class="btn-group col-sm-10" data-toggle="buttons">
+                                  <label class="btn btn-success active">
+                                    <input type="radio" name="smokingOptions" id="nonsmoking" autocomplete="off" checked>Non-Smoking
+                                  </label>
+                                  <label class="btn btn-danger">
+                                    <input type="radio" name="smokingOptions" id="smoking" autocomplete="off">Smoking
+                                  </label>
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label for="reserve-date" class="col-sm-2 control-label">Date and Time</label>
+                                <div class="input-group date col-sm-3" data-provide="datepicker">
+                                    <input type="text" class="form-control" id="reserve-date" placeholder="Date">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </div>
+                                </div>
+                                <div class="input-group date col-sm-3" data-provide="datepicker">
+                                    <input type="text" class="form-control" id="reserve-time" placeholder="Time">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-time"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                <label for="reserve-date" class="col-sm-2 control-label"></label>
+                                <p>
+                                    <button type="button" class="btn btn-primary btn-sm">Reserve</button>
+                                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                                </p>
+                            </div>
+                            <div class="alert alert-warning">
+                                <strong>Warning:</strong> Please <a href="tel:+852 1234 5678"><strong>call</strong></a> us to reserve for more than six guests.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     <div class="container">
         <div class="row row-content">
@@ -236,50 +297,6 @@
                         <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <div id="reserveform" class="row row-content">
-            <div class="col-xs-12 col-sm-3">
-                <p style="padding:20px;"></p>
-                <h3 align=center>Reserve a Table</h3>
-            </div>
-            <div class="col-xs-12 col-sm-9">
-                <form class="form-horizontal" role="form">
-                    <div class="form-group">
-                        <label for="guest-count" class="col-sm-2 control-label">Number of Guests</label>                        
-                        <div id="guest-count" class="col-sm-10">
-                            <label class="radio-inline"><input type="radio" name="guest-count">1</label>
-                            <label class="radio-inline"><input type="radio" name="guest-count">2</label>
-                            <label class="radio-inline"><input type="radio" name="guest-count">3</label>
-                            <label class="radio-inline"><input type="radio" name="guest-count">4</label>
-                            <label class="radio-inline"><input type="radio" name="guest-count">5</label>
-                            <label class="radio-inline"><input type="radio" name="guest-count">6</label>
-                        </div>
-                    </div>
-                    <div class="form-group form-inline">
-                        <label for="reserve-date" class="col-sm-2 control-label">Date and Time</label>
-                        <div class="input-group col-sm-3">
-                            <input type="text" class="form-control" id="reserve-date" placeholder="Date">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                        <div class="input-group col-sm-3 col-sm-offset-1">
-                            <input type="text" class="form-control" id="reserve-time" placeholder="Time">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-time"></span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"></label>
-                        <div class="col-sm-4"> <input type="submit" class="btn btn-primary" value="Reserve" /></div>
-                    </div>
-                    <div class="alert alert-warning">
-                        <strong>Warning:</strong> Please <a href="tel:+852 1234 5678"><strong>call</strong></a> us to reserve for more than six guests.
-                    </div>
-                </form>
             </div>
         </div>
     </div>
